@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Theo's Clothes - Designer &amp; Streetwear Archive</title>
+  <meta name="description" content="Authenticated designer and streetwear resale: Gallery Dept., Rhude, Off-White, Bravest Studios, Heron Preston and Yeezy." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <div class="announcement-bar">
+    5.0 rated on Grailed &amp; Depop<span class="sep">·</span>Offers welcome<span class="hide-sm"><span class="sep">·</span>Ships in 1–2 business days</span>
+  </div>
+
+  <header class="site-header">
+    <div class="header-inner container">
+      <a href="#" class="brand-logo" aria-label="Theo's Clothes home">
+        <div class="logo-text">
+          <span class="brand-name">Theo's Clothes</span>
+          <span class="brand-sub">Designer &amp; Archive</span>
+        </div>
+      </a>
+
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="#catalog" class="nav-link active">Shop</a>
+        <a href="#seller-profile" class="nav-link">About</a>
+        <a href="#reviews" class="nav-link">Reviews</a>
+        <a href="#faq" class="nav-link">FAQ</a>
+      </nav>
+
+      <div class="header-actions">
+        <button id="searchToggleBtn" class="action-btn" title="Search" aria-label="Search">
+          <span class="material-symbols-outlined">search</span>
+        </button>
+        <button id="wishlistToggleBtn" class="action-btn wishlist-header-btn" title="Saved items" aria-label="Saved items">
+          <span class="material-symbols-outlined heart-icon">favorite</span>
+          <span class="badge-count wishlist-count" style="display: none;">0</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <section class="hero-section">
+    <div class="container hero-content">
+      <p class="hero-eyebrow">Authenticated Resale</p>
+      <h1 class="hero-title">Designer &amp; streetwear, curated.</h1>
+      <p class="hero-description">
+        Gallery Dept., Rhude, Off-White, Bravest Studios, Heron Preston and Yeezy. Every piece inspected before it ships.
+      </p>
+      <div class="hero-cta-group">
+        <a href="#catalog" class="btn btn-primary">Shop active drops!</a>
+        <a href="#seller-profile" class="btn btn-outline">About the seller</a>
+      </div>
+    </div>
+  </section>
+
+  <div id="searchOverlay" class="search-overlay hidden">
+    <div class="container search-inner">
+      <div class="search-input-wrapper">
+        <span class="material-symbols-outlined search-icon">search</span>
+        <input type="text" id="globalSearchInput" placeholder="Search brand, item, size or color" autocomplete="off" />
+        <button id="clearSearchBtn" class="clear-search-btn" title="Clear search" aria-label="Clear search">
+          <span class="material-symbols-outlined">close</span>
+        </button>
+      </div>
+      <div class="search-quick-tags">
+        <span class="quick-label">Popular</span>
+        <button class="quick-tag-btn" data-tag="Gallery Dept">Gallery Dept.</button>
+        <button class="quick-tag-btn" data-tag="Rhude">Rhude</button>
+        <button class="quick-tag-btn" data-tag="Off-White">Off-White</button>
+        <button class="quick-tag-btn" data-tag="Bravest Studios">Bravest Studios</button>
+        <button class="quick-tag-btn" data-tag="Nike">Nike</button>
+        <button class="quick-tag-btn" data-tag="Heron Preston">Heron Preston</button>
+      </div>
+    </div>
+  </div>
+
+  <section id="catalog" class="catalog-section">
+    <div class="container">
+
+      <div class="catalog-header">
+        <h2 class="section-title">Available Now</h2>
+      </div>
+
+      <div class="controls-bar">
+        <div class="category-pills" id="categoryPills">
+          <button class="pill-btn active" data-category="all">All</button>
+          <button class="pill-btn" data-category="tees">Tops</button>
+          <button class="pill-btn" data-category="hoodies">Hoodies &amp; Sweats</button>
+          <button class="pill-btn" data-category="shorts">Bottoms</button>
+          <button class="pill-btn" data-category="shirts">Shirts</button>
+          <button class="pill-btn" data-category="footwear">Footwear</button>
+        </div>
+
+        <div class="filter-dropdowns">
+          <div class="custom-select-wrap">
+            <label for="designerSelect" class="sr-only">Designer</label>
+            <select id="designerSelect" class="custom-select">
+              <option value="all">All designers</option>
+              <option value="Gallery Dept.">Gallery Dept.</option>
+              <option value="Rhude">Rhude</option>
+              <option value="Heron Preston">Heron Preston</option>
+              <option value="Bravest Studios">Bravest Studios</option>
+              <option value="Off-White">Off-White</option>
+              <option value="Nike">Nike</option>
+              <option value="Golden Goose">Golden Goose</option>
+              <option value="Kanye West">Yeezy/Kanye West</option>
+              <option value="Travis Scott">Travis Scott</option>
+              <option value="Marcelo Burlon">Marcelo Burlon</option>
+            </select>
+          </div>
+
+          <div class="custom-select-wrap">
+            <label for="sizeSelect" class="sr-only">Size</label>
+            <select id="sizeSelect" class="custom-select">
+              <option value="all">All sizes</option>
+              <option value="XS">XS</option>
+              <option value="S">S</option>
+              <option value="M">M</option>
+              <option value="L">L</option>
+              <option value="XL">XL</option>
+              <option value="XXL">XXL</option>
+              <option value="30">Waist 30</option>
+              <option value="8">US 8</option>
+            </select>
+          </div>
+
+          <div class="custom-select-wrap">
+            <label for="sortSelect" class="sr-only">Sort</label>
+            <select id="sortSelect" class="custom-select">
+              <option value="featured">Newest</option>
+              <option value="price-asc">Price Low to H</option>
+              <option value="price-desc">Price: high to low</option>
+              <option value="price-drop">Largest reduction</option>
+            </select>
+          </div>
+
+          <button id="resetFiltersBtn" class="btn btn-sm btn-ghost" title="Clear filters">Clear</button>
+        </div>
+      </div>
+
+      <div id="filterSummaryBar" class="filter-summary-bar" style="display: none;">
+        <span class="summary-text" id="filterSummaryText"></span>
+        <button id="clearAllFiltersLink" class="clear-link">Clear all</button>
+      </div>
+
+      <div id="productsGrid" class="products-grid" aria-live="polite"></div>
+
+      <div id="emptyState" class="empty-state" style="display: none;">
+        <h3>No items match your filters</h3>
+        <button class="btn btn-primary" onclick="resetAllFilters()">Clear filterz</button>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="seller-profile" class="seller-profile-section">
+    <div class="container">
+      <div class="profile-card">
+        <div class="profile-left">
+          <div class="avatar-wrap">
+            <img src="images/avatar.jpg" alt="Theo Ureche" class="profile-avatar" />
+            <span class="verified-check" title="Verified seller"><span class="material-symbols-outlined">verified</span></span>
+          </div>
+          <div class="profile-info">
+            <div class="profile-title-row">
+              <h3 class="profile-handle">
+                <a href="https://www.instagram.com/theo_ureche" target="_blank" rel="noopener noreferrer" class="profile-insta-link">@theo_ureche</a>
+              </h3>
+            </div>
+            <p class="profile-bio">Streetwear, archival designer pieces and sneakers. Listed on Grailed and Depop.</p>
+            <div class="profile-meta-pills">
+              <span><span class="material-symbols-outlined">location_on</span> Seattle, WA</span>
+              <span><span class="material-symbols-outlined">local_shipping</span> Ships in 1–2 business days</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="profile-right">
+          <div class="seller-stat-box">
+            <span class="big-score">5.0 star</span>
+            <span class="stat-sub">rated</span>
+          </div>
+          <div class="seller-stat-box">
+            <span class="big-score">100+</span>
+            <span class="stat-sub">lifetime sales</span>
+          </div>
+          <div class="platform-direct-links">
+            <a href="https://www.grailed.com/theos_clothes" target="_blank" rel="noopener noreferrer" class="btn btn-grailed btn-sm">Grailed Shop</a>
+            <a href="https://www.depop.com/theos_clothes/" target="_blank" rel="noopener noreferrer" class="btn btn-depop btn-sm">Depop</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="reviews" class="reviews-section">
+    <div class="container">
+      <div class="section-heading text-center">
+        <h2 class="section-title">Reviews</h2>
+      </div>
+
+      <div class="reviews-grid">
+        <div class="review-screenshot-card">
+          <div class="review-card-top">
+            <span class="site-badge">Grailed</span>
+            <span class="review-stars-row" aria-label="5 stars">★★★★★</span>
+          </div>
+          <div class="review-dialog-bubble">
+            <p class="review-quote">“Came as looked no problems.”</p>
+          </div>
+          <div class="review-card-footer">
+            <div class="reviewer-meta-text">
+              <span class="reviewer-user">marcus_k</span>
+              <span class="review-sold-item">Gallery Dept. “Art That Kills” Tee</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="review-screenshot-card">
+          <div class="review-card-top">
+            <span class="site-badge">Depop</span>
+            <span class="review-stars-row" aria-label="5 stars">★★★★★</span>
+          </div>
+          <div class="review-dialog-bubble">
+            <p class="review-quote">“came super fast, exactly like photos! thanks!”</p>
+          </div>
+          <div class="review-card-footer">
+            <div class="reviewer-meta-text">
+              <span class="reviewer-user">@julian_r</span>
+              <span class="review-sold-item">Bravest Studios Gambling Shorts</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="review-screenshot-card">
+          <div class="review-card-top">
+            <span class="site-badge">Grailed</span>
+            <span class="review-stars-row" aria-label="5 stars">★★★★★</span>
+          </div>
+          <div class="review-dialog-bubble">
+            <p class="review-quote">“100% authentic, arrived fast. Great seller.”</p>
+          </div>
+          <div class="review-card-footer">
+            <div class="reviewer-meta-text">
+              <span class="reviewer-user">david_l_99</span>
+              <span class="review-sold-item">Off-White × Nike Dunk Low Lot 32</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="review-screenshot-card">
+          <div class="review-card-top">
+            <span class="site-badge">Depop</span>
+            <span class="review-stars-row" aria-label="5 stars">★★★★★</span>
+          </div>
+          <div class="review-dialog-bubble">
+            <p class="review-quote">“fire piece, smooth delivery, perfect seller”</p>
+          </div>
+          <div class="review-card-footer">
+            <div class="reviewer-meta-text">
+              <span class="reviewer-user">@sam_west</span>
+              <span class="review-sold-item">Kanye West Sunday Service Tee</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="review-screenshot-card">
+          <div class="review-card-top">
+            <span class="site-badge">Grailed</span>
+            <span class="review-stars-row" aria-label="5 stars">★★★★★</span>
+          </div>
+          <div class="review-dialog-bubble">
+            <p class="review-quote">“It came looking good, quick shipping.”</p>
+          </div>
+          <div class="review-card-footer">
+            <div class="reviewer-meta-text">
+              <span class="reviewer-user">tyler_grailz</span>
+              <span class="review-sold-item">Jordan 4 Retro Red Cement, US 8</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="authenticity" class="authenticity-section">
+    <div class="container">
+      <div class="authenticity-banner">
+        <span class="material-symbols-outlined">single_arrow</span>
+        <div class="auth-content">
+          <h3>Authenticity guaranteed</h3>
+          <p>Every item is inspected including tags, stitching, materials, and construction before getting shipped. Full refund if anything is not authentic.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq" class="faq-section">
+    <div class="container">
+      <div class="section-heading text-center">
+        <h2 class="section-title">FAQ</h2>
+      </div>
+
+      <div class="faq-accordion">
+        <details class="faq-item" open>
+          <summary>Are these the same items listed on Grailed and Depop?</summary>
+          <div class="faq-answer">
+            <p>Yeah, this site has both my active <a href="https://www.grailed.com/theos_clothes" target="_blank" rel="noopener noreferrer" class="faq-link">Grailed</a> and my <a href="https://www.depop.com/theos_clothes/" target="_blank" rel="noopener noreferrer" class="faq-link">Depop</a> inventory in one place.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>Can I make an offer?</summary>
+          <div class="faq-answer">
+            <p>Yes, to submit an offer, select Make Offer on any item. I reply by email with an answer or counter-offer.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>How fast do you ship?</summary>
+          <div class="faq-answer">
+            <p>Within 1–2 business days from Seattle via USPS Priority Mail or UPS, with tracking.</p>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <div class="footer-col brand-col">
+        <div class="logo-text">
+          <span class="brand-name">Theo's Clothes</span>
+          <span class="brand-sub">Designer &amp; Archive</span>
+        </div>
+        <p class="footer-desc">Authenticated designer and streetwear resale. Seattle, WA.</p>
+        <div class="social-links">
+          <a href="https://www.instagram.com/theo_ureche" target="_blank" rel="noopener noreferrer">Instagram</a>
+          <a href="https://www.grailed.com/theos_clothes" target="_blank" rel="noopener noreferrer">Grailed</a>
+          <a href="https://www.depop.com/theos_clothes/" target="_blank" rel="noopener noreferrer">Depop</a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Designers</h4>
+        <ul>
+          <li><a href="#catalog" onclick="filterByDesigner('Gallery Dept.')">Gallery Dept.</a></li>
+          <li><a href="#catalog" onclick="filterByDesigner('Rhude')">Rhude</a></li>
+          <li><a href="#catalog" onclick="filterByDesigner('Off-White')">Off-White</a></li>
+          <li><a href="#catalog" onclick="filterByDesigner('Bravest Studios')">Bravest Studios</a></li>
+          <li><a href="#catalog" onclick="filterByDesigner('Heron Preston')">Heron Preston</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col newsletter-col">
+        <h4>New Arrivals</h4>
+        <p>Be the first to know about drops.</p>
+        <form class="newsletter-form" onsubmit="handleNewsletter(event)">
+          <input type="email" placeholder="Email address" aria-label="Email address" required />
+          <button type="submit" class="btn btn-sm">Subscribe!</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="footer-bottom container">
+      <p>© 2026 Theo's Clothes</p>
+    </div>
+  </footer>
+
+  <dialog id="quickViewModal" class="app-modal">
+    <div class="modal-dialog-content">
+      <button class="modal-close-btn" id="closeQuickViewBtn" aria-label="Close">
+        <span class="material-symbols-outlined">close</span>
+      </button>
+
+      <div class="quickview-body">
+        <div class="quickview-media">
+          <div class="main-image-wrap">
+            <img id="qvImage" src="" alt="" />
+            <div id="qvBadges" class="qv-badges"></div>
+          </div>
+          <div class="media-hint">
+            <span class="material-symbols-outlined">photo_library</span> <span id="qvPhotoCount">5 photos</span> on Grailed
+          </div>
+        </div>
+
+        <div class="quickview-details">
+          <div class="qv-designer" id="qvDesigner"></div>
+          <h2 class="qv-title" id="qvTitle"></h2>
+
+          <div class="qv-price-block">
+            <span class="qv-current-price" id="qvPrice"></span>
+            <span class="qv-original-price" id="qvOriginalPrice"></span>
+            <span class="qv-discount-tag" id="qvDiscountTag" style="display: none;"></span>
+          </div>
+
+          <div class="qv-specs-grid">
+            <div class="spec-pill">
+              <span class="spec-label">Size</span>
+              <span class="spec-val" id="qvSize">-</span>
+            </div>
+            <div class="spec-pill">
+              <span class="spec-label">Condition</span>
+              <span class="spec-val" id="qvCondition">-</span>
+            </div>
+            <div class="spec-pill">
+              <span class="spec-label">Color</span>
+              <span class="spec-val" id="qvColor">-</span>
+            </div>
+          </div>
+
+          <div class="qv-trust-banner">
+            <span class="material-symbols-outlined auth-icon">verified</span>
+            <span>Authenticity guaranteed. Ships in 1–2 business days</span>
+          </div>
+
+          <div class="qv-actions-group">
+            <a id="qvContactBtn" href="#" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-block">Buy on Grailed</a>
+            <button id="qvMakeOfferBtn" class="btn btn-outline btn-block">Make Offer</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+  <dialog id="offerModal" class="app-modal">
+    <div class="modal-dialog-content modal-sm">
+      <button class="modal-close-btn" id="closeOfferBtn" aria-label="Close">
+        <span class="material-symbols-outlined">close</span>
+      </button>
+
+      <div class="offer-modal-content">
+        <div class="offer-header">
+          <h3>Make an Offer</h3>
+        </div>
+
+        <div class="offer-item-summary">
+          <img id="offerItemImg" src="" alt="" />
+          <div>
+            <div class="item-brand" id="offerItemDesigner"></div>
+            <div class="item-title" id="offerItemTitle"></div>
+            <div class="item-price">Asking <strong id="offerItemPrice"></strong></div>
+          </div>
+        </div>
+
+        <div class="quick-offer-buttons">
+          <button type="button" class="quick-pct-btn" data-pct="10" id="offerBtn10">−10%</button>
+          <button type="button" class="quick-pct-btn" data-pct="15" id="offerBtn15">−15%</button>
+          <button type="button" class="quick-pct-btn" data-pct="20" id="offerBtn20">−20%</button>
+        </div>
+
+        <form id="offerForm" onsubmit="submitOffer(event)">
+          <div class="form-group">
+            <label for="offerAmountInput">Offer (USD)</label>
+            <div class="input-dollar-wrap">
+              <span class="dollar-sign">$</span>
+              <input type="number" id="offerAmountInput" min="5" step="1" required />
+            </div>
+            <span class="form-hint" id="offerSavingsHint"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="offerEmailInput">Email</label>
+            <input type="email" id="offerEmailInput" placeholder="name@email.com" required />
+          </div>
+
+          <div class="form-group">
+            <label for="offerNoteInput">Note (optional)</label>
+            <textarea id="offerNoteInput" rows="2"></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-block">Submit Offer</button>
+        </form>
+      </div>
+    </div>
+  </dialog>
+
+  <dialog id="wishlistModal" class="app-modal">
+    <div class="modal-dialog-content modal-md">
+      <button class="modal-close-btn" id="closeWishlistBtn" aria-label="Close">
+        <span class="material-symbols-outlined">close</span>
+      </button>
+
+      <div class="wishlist-header">
+        <h3>Saved Stuff</h3>
+      </div>
+
+      <div class="wishlist-items-list" id="wishlistItemsContainer"></div>
+
+      <div id="wishlistEmptyView" class="wishlist-empty-view" style="display: none;">
+        <p>You haven't saved anything yet. Select the heart on any item to save it</p>
+        <button class="btn btn-primary btn-sm" onclick="document.getElementById('wishlistModal').close();">Browse</button>
+      </div>
+    </div>
+  </dialog>
+
+  <div id="toastContainer" class="toast-container" aria-live="polite"></div>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
